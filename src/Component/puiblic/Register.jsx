@@ -45,7 +45,7 @@ const Register = ({role}) => {
           <input type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="password" className="w-full p-2 border rounded-md" required />
         </div>
    
-        <button type="submit" onClick={handleRegister} className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
+        <button type="submit" onClick={handleRegistration} className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600">
           Register
         </button>
       </form>
