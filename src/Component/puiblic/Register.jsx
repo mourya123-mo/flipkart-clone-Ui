@@ -1,15 +1,35 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 
 const Register = ({role}) => {
  const[username,setUsername]=useState("");
  const [password,setPassword]=useState("")
- const handleRegister= async(e) =>{
-  e.preventDefault();
-  console.log(username);
-  console.log(password)
-  console.log(role)
- }
+
+ const handleRegistration = async (event) => {
+  event.preventDefault();
+  //fire request to server
+  //using axios
+  const URL = "http://localhost:8080/api/v1/register";
+  const body = {
+    email: username,
+    password: password,
+    userrole: role,
+  };
+  const header = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const response = await axios.post(URL, body, header);
+    console.log(response)
+  } catch (error) {
+    console.log(error);
+  }
+
+};
 
 
   return (
