@@ -26,9 +26,11 @@ const Header = () => {
                 <nav className='space-x-6'>
                     {/* Login */}
                     <div className="relative inline-block text-left">
-                        <button onClick={LoginDropdown} className="text-white hover:text-blue-500 bg-sky-700 p-2 rounded">
+                       <Link to="/login">
+                       <button onClick={LoginDropdown} className="text-white hover:text-blue-500 bg-sky-700 p-2 rounded">
                             Login
                         </button>
+                       </Link>
                         {showLoginDropdown && (
                             <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded ">
                                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign-up</Link>
